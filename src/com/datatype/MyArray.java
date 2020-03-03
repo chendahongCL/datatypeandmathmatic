@@ -92,6 +92,8 @@ public class MyArray {
 		myArray.update(2, 4);
 		//myArray.delete(2);
 		myArray.display();
+		myArray.display();
+		System.out.print("aaa");
 		//System.out.println(myArray.search(5));
 		//System.out.println(myArray.get(0));
 	}
