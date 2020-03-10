@@ -7,32 +7,35 @@ package com.datatype;
  */
 public class MyStack {
     private long[] arr;
+    //栈顶对应下标
     private int top;
+    //默认构造方法
     public MyStack() {
     	arr = new long[10];
     	top = -1;
     }
+    //带参构造
     public MyStack(int size) {
     	arr = new long[size];
     	top = -1;
     }
-    
+    //插入元素
     public void push(long data) {
     	arr[++top] = data;
     }
-    
+    //获取栈顶元素并弹出
     public long pop() {
     	return arr[top--];
     }
-    
+    //查看栈顶元素
     public long peek() {
     	return arr[top];
     }
-    
+    //判断栈是否为空
     public boolean isEmpty() {
     	return top==-1;
     }
-    
+    //判断栈是否满
     public boolean isFull() {
     	return top == arr.length -1;
     }
