@@ -7,8 +7,10 @@ package com.datatype;
 public class Node {
 	// 节点数据
 	public long data;
-	// 节点指针域
+	// 节点下一个节点指针域
 	public Node next;
+	//节点上一个节点指针域
+	public Node previous;
 	
 	public Node(long data) {
 		this.data = data; 
