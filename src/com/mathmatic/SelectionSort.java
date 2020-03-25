@@ -11,15 +11,19 @@ public class SelectionSort {
     	for(int i=0;i<arr.length;i++) {
     		k = i;
     		for(int j = i+1;j<arr.length;j++) {
+				
+				  if(k==arr.length-1) 
+					  break;
+				 
     			if(arr[j]<arr[k]) {
     				k=j;
     			}
     		}
     		temp=arr[k];
     		arr[k]=arr[i];
-    		arr[i]=temp;
-    	}
-    }
+     		arr[i]=temp; 
+		}
+	}
     
     public static void main(String[] args) {
     	long[] arr = {1,6,8,3,-5,89,-3};
