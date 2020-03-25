@@ -14,13 +14,13 @@ import java.util.TreeMap;
  *
  */
 public class Graph {
-	// ½ÚµãÊý×é
+	// ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½
 	private Vertex[] vertexList;
-	// Êý×éµÄÈÝÁ¿
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private int maxSize = 20;
-	// ÁÚ½Ó¾ØÕó
+	// ï¿½Ú½Ó¾ï¿½ï¿½ï¿½
 	private int[][] adjMat;
-	// µ±Ç°½Úµã
+	// ï¿½ï¿½Ç°ï¿½Úµï¿½
 	private int nVertex;
 
 	public Graph() {
@@ -34,18 +34,18 @@ public class Graph {
 		}
 	}
 
-	// Ìí¼Ó½Úµã
+	// ï¿½ï¿½Ó½Úµï¿½
 	public void addVertex(char label) {
 		vertexList[nVertex++] = new Vertex(label);
 	}
 
-	// Ìí¼Ó±ß
+	// ï¿½ï¿½Ó±ï¿½
 	public void addEdge(int start, int end) {
 		adjMat[start][end] = 1;
 		adjMat[end][start] = 1;
 	}
 	
-	//Éî¶ÈÓÅÏÈËÑË÷
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void dfs() {
 		MyStack stack = new MyStack();
 		display(0);
@@ -67,17 +67,33 @@ public class Graph {
 		
 	}
 	
-	//¹ã¶ÈÓÅÏÈËÑË÷
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void wfs() {
-		
+		MyQueue queue = new MyQueue();
+		display(0);
+		vertexList[0].wasVisited = true;
+		queue.insert(0);
+        int adjIndex = -1;
+		while(!queue.isEmpty()) {
+			int peek = (int)queue.peek();
+			while((adjIndex = getadjWasVisited(peek)) != -1) {
+				vertexList[adjIndex].wasVisited = true;
+				queue.insert(adjIndex);
+				display(adjIndex);
+			}
+			queue.remove();
+		}
+		for(int j = 0;j < nVertex;j++) {
+			vertexList[j].wasVisited = false;
+		}
 	}
 	
-	//ÏÔÊ¾·½·¨
+	//ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
 	public void display(int v) {
 		System.out.println(vertexList[v].label);
 	}
 	
-	//²éÕÒµ±Ç°½ÚµãµÄÎ´±»·ÃÎÊ¹ýµÄÁÚ½Ó½ÚµãËùÔÚÊý×éÏÂ±ê
+	//ï¿½ï¿½ï¿½Òµï¿½Ç°ï¿½Úµï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½Ú½Ó½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½
     public int getadjWasVisited(int v) {
     	for(int i = 0;i < nVertex;i++) {
     		if(adjMat[v][i] == 1 && vertexList[i].wasVisited == false) {
@@ -94,12 +110,16 @@ public class Graph {
 		graph.addVertex('C');
 		graph.addVertex('D');
 		graph.addVertex('E');
+		graph.addVertex('F');
+		graph.addVertex('G');
 		graph.addEdge(0, 1);
 		graph.addEdge(0, 2);
-		graph.addEdge(1, 2);
+		//graph.addEdge(1, 2);
 		graph.addEdge(1, 3);
 		graph.addEdge(1, 4);
-		graph.dfs();
+		graph.addEdge(4, 5);
+		graph.addEdge(2, 1);
+		graph.wfs();
 
 	}
 }
