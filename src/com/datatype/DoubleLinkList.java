@@ -132,10 +132,13 @@ public class DoubleLinkList {
 			doubleLinkList.deleteFirst();
 			doubleLinkList.display();
 			System.out.println();
+
 			System.out.println("这是release分支---");
 			System.out.println("------");
 			System.out.println("这是dev分支---");
+			System.out.println("bbbbbbbbbbbbbbb");
 			
+
 		}
 	}
 }

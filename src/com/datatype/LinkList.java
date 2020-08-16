@@ -68,6 +68,32 @@ public class LinkList {
 		}
 		return currentNode;
 	}
+	
+	//递归实现单链表反转
+	public Node reverseNodeDiGui(Node head) {
+		if(head ==null || head.next ==null) {
+			return head;
+		}
+		Node newHead = reverseNodeDiGui(head.next);
+		head.next.next = head;
+		head.next = null;
+		return newHead;
+	}
+	
+	//非递归实现链表反转
+	public Node reverseNodeFeiDiiGu(Node head) {
+		Node currentNode = head;
+		Node prexNode = null;
+		Node nextNode = null;
+		while (currentNode != null) {
+			nextNode = currentNode.next;
+			currentNode.next = prexNode;
+			prexNode = currentNode;
+			currentNode = nextNode;
+			
+		}
+		return prexNode;
+	}
 
 	public static void main(String[] args) {
 		LinkList linkList = new LinkList();
@@ -82,8 +108,12 @@ public class LinkList {
         //linkList.deleteFirst();
         //linkList.display();
 		//Node node = linkList.find(7);
-		Node node = linkList.deleteNode(1);
-		System.out.println(node);
+		//Node node = linkList.deleteNode(1);
+		//System.out.println(node);
+		linkList.display();
+		System.out.println();
+		Node firstNode = linkList.reverseNodeFeiDiiGu(linkList.firstNode);
+		linkList.firstNode = firstNode;
 		linkList.display();
 		
 

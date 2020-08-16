@@ -8,19 +8,19 @@ import java.util.Random;
 import java.util.TreeMap;
 
 /**
- * ͼ
+ * 图
  * 
  * @author cdh
  *
  */
 public class Graph {
-	// �ڵ�����
+	// 锟节碉拷锟斤拷锟斤拷
 	private Vertex[] vertexList;
-	// ���������
+	// 锟斤拷锟斤拷锟斤拷锟斤拷锟�
 	private int maxSize = 20;
-	// �ڽӾ���
+	// 锟节接撅拷锟斤拷
 	private int[][] adjMat;
-	// ��ǰ�ڵ�
+	// 锟斤拷前锟节碉拷
 	private int nVertex;
 
 	public Graph() {
@@ -34,18 +34,18 @@ public class Graph {
 		}
 	}
 
-	// ��ӽڵ�
+	// 锟斤拷咏诘锟�
 	public void addVertex(char label) {
 		vertexList[nVertex++] = new Vertex(label);
 	}
 
-	// ��ӱ�
+	// 锟斤拷颖锟�
 	public void addEdge(int start, int end) {
 		adjMat[start][end] = 1;
 		adjMat[end][start] = 1;
 	}
 	
-	//�����������
+	//锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟�
 	public void dfs() {
 		MyStack stack = new MyStack();
 		display(0);
@@ -67,7 +67,7 @@ public class Graph {
 		
 	}
 	
-	//�����������
+	//锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷锟�
 	public void wfs() {
 		MyQueue queue = new MyQueue();
 		display(0);
@@ -88,12 +88,12 @@ public class Graph {
 		}
 	}
 	
-	//��ʾ����
+	//锟斤拷示锟斤拷锟斤拷
 	public void display(int v) {
 		System.out.println(vertexList[v].label);
 	}
 	
-	//���ҵ�ǰ�ڵ��δ�����ʹ����ڽӽڵ����������±�
+	//锟斤拷锟揭碉拷前锟节碉拷锟轿达拷锟斤拷锟斤拷使锟斤拷锟斤拷诮咏诘锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷卤锟�
     public int getadjWasVisited(int v) {
     	for(int i = 0;i < nVertex;i++) {
     		if(adjMat[v][i] == 1 && vertexList[i].wasVisited == false) {
@@ -120,6 +120,7 @@ public class Graph {
 		graph.addEdge(4, 5);
 		graph.addEdge(2, 1);
 		graph.wfs();
+		System.out.println("我想把这个提交上去！！！！！！");
 
 	}
 }
