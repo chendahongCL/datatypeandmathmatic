@@ -33,5 +33,6 @@ public class SelectionSort {
 			System.out.print(arr[i]+" ");
 		}
 		System.out.print("]");
+		System.out.println(998/10);
 	}
 }
