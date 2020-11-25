@@ -1,10 +1,13 @@
+/*
 package com.datatype;
+*/
 /**
  * 
  * @author cdh
  * 队列
  *
- */
+ *//*
+
 public class MyQueue {
 	//底层使用数组实现
     private long[] arr;
@@ -71,3 +74,4 @@ public class MyQueue {
 		mq.insert(110);
 	}
 }
+*/

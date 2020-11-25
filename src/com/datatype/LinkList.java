@@ -1,16 +1,19 @@
+/*
 package com.datatype;
 
+*/
 /**
- * Êý¾Ý½á¹¹Ö®µ¥ÏòÏòÁ´±í
+ * ï¿½ï¿½ï¿½Ý½á¹¹Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @author cdh
  *
- */
+ *//*
+
 public class LinkList {
-	// Á´±íÍ·²¿½Úµã
+	// ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Úµï¿½
 	private Node firstNode;
 
-	// ´ÓÍ·²¿²åÈëÔªËØ
+	// ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 	public void insertFirst(long data) {
 		Node node = new Node(data);
 		if (firstNode == null) {
@@ -21,7 +24,7 @@ public class LinkList {
 		}
 	}
 
-	// É¾³ýÍ·²¿ÔªËØ
+	// É¾ï¿½ï¿½Í·ï¿½ï¿½Ôªï¿½ï¿½
 	public Node deleteFirst() {
 		Node tmp = firstNode;
 		firstNode = tmp.next;
@@ -37,7 +40,7 @@ public class LinkList {
 		}
 	}
 
-	// ²éÕÒ½Úµã
+	// ï¿½ï¿½ï¿½Ò½Úµï¿½
 	public Node find(long data) {
 		Node curentNode = firstNode;
 		while (curentNode.data != data) {
@@ -49,7 +52,7 @@ public class LinkList {
 		return curentNode;
 	}
 	
-	//É¾³ý½Úµã
+	//É¾ï¿½ï¿½ï¿½Úµï¿½
 	public Node deleteNode(long data) {
 		Node currentNode = firstNode;
 		Node previousNode = firstNode;
@@ -69,7 +72,7 @@ public class LinkList {
 		return currentNode;
 	}
 	
-	//µÝ¹éÊµÏÖµ¥Á´±í·´×ª
+	//ï¿½Ý¹ï¿½Êµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½×ª
 	public Node reverseNodeDiGui(Node head) {
 		if(head ==null || head.next ==null) {
 			return head;
@@ -80,7 +83,7 @@ public class LinkList {
 		return newHead;
 	}
 	
-	//·ÇµÝ¹éÊµÏÖÁ´±í·´×ª
+	//ï¿½ÇµÝ¹ï¿½Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ª
 	public Node reverseNodeFeiDiiGu(Node head) {
 		Node currentNode = head;
 		Node prexNode = null;
@@ -119,3 +122,4 @@ public class LinkList {
 
 	}
 }
+*/

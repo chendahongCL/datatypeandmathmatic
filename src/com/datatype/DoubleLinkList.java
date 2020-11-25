@@ -1,18 +1,20 @@
+/*
 package com.datatype;
 
-/**
- * Á´±íÖ®Ë«ÏòÁ´±í
+*
+ * ï¿½ï¿½ï¿½ï¿½Ö®Ë«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  * 
  * @author cdh
  *
- */
+
+
 public class DoubleLinkList {
-	// Á´±íÍ·²¿½Úµã
+	// ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½Úµï¿½
 	private Node firstNode;
-	// Á´±íµÄÎ²²¿½Úµã
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Î²ï¿½ï¿½ï¿½Úµï¿½
 	private Node lastNode;
 
-	// ´ÓÍ·²¿²åÈëÔªËØ
+	// ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 	public void insertFirst(long data) {
 		Node node = new Node(data);
 		if (isEmpty()) {
@@ -25,7 +27,7 @@ public class DoubleLinkList {
 		}
 	}
 
-	// ´ÓÎ²²¿²åÈëÔªËØ
+	// ï¿½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 	public void insertLast(long data) {
 		Node node = new Node(data);
 		if (isEmpty()) {
@@ -38,7 +40,7 @@ public class DoubleLinkList {
 		}
 	}
 
-	// É¾³ýÍ·²¿ÔªËØ
+	// É¾ï¿½ï¿½Í·ï¿½ï¿½Ôªï¿½ï¿½
 	public Node deleteFirst() {
 		if (!isEmpty()) {
 			Node tmp = firstNode;
@@ -51,7 +53,7 @@ public class DoubleLinkList {
 		return null;
 	}
 	
-	//É¾³ýÎ²²¿ÔªËØ
+	//É¾ï¿½ï¿½Î²ï¿½ï¿½Ôªï¿½ï¿½
 	public Node deleteLast() {
 		if (!isEmpty()) {
 			Node tmp = lastNode;
@@ -76,7 +78,7 @@ public class DoubleLinkList {
 		}
 	}
 
-	// ²éÕÒ½Úµã
+	// ï¿½ï¿½ï¿½Ò½Úµï¿½
 	public Node find(long data) {
 		Node curentNode = firstNode;
 		while (curentNode.data != data) {
@@ -88,12 +90,12 @@ public class DoubleLinkList {
 		return curentNode;
 	}
 
-	// ÅÐ¶ÏÊÇ·ñÎªnull
+	// ï¿½Ð¶ï¿½ï¿½Ç·ï¿½Îªnull
 	public boolean isEmpty() {
 		return firstNode == null;
 	}
 
-	// ¸ù¾Ý½ÚµãÉ¾³ýÊý¾Ý
+	// ï¿½ï¿½ï¿½Ý½Úµï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Node deleteNode(long data) {
 		Node currentNode = firstNode;
 		while (currentNode.data != data) {
@@ -133,12 +135,13 @@ public class DoubleLinkList {
 			doubleLinkList.display();
 			System.out.println();
 
-			System.out.println("ÕâÊÇrelease·ÖÖ§---");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½releaseï¿½ï¿½Ö§---");
 			System.out.println("------");
-			System.out.println("ÕâÊÇdev·ÖÖ§---");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½devï¿½ï¿½Ö§---");
 			System.out.println("bbbbbbbbbbbbbbb");
 			
 
 		}
 	}
 }
+*/

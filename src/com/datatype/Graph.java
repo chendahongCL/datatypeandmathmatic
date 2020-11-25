@@ -1,3 +1,4 @@
+/*
 package com.datatype;
 
 import java.util.HashMap;
@@ -7,12 +8,14 @@ import java.util.ListIterator;
 import java.util.Random;
 import java.util.TreeMap;
 
+*/
 /**
  * 图
  * 
  * @author cdh
  *
- */
+ *//*
+
 public class Graph {
 	// 锟节碉拷锟斤拷锟斤拷
 	private Vertex[] vertexList;
@@ -124,3 +127,4 @@ public class Graph {
 
 	}
 }
+*/
